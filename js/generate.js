@@ -36,12 +36,30 @@ document.getElementById('calculator').addEventListener('click',function(event){
             const remainingDigits = digit.join('');
             numberField.value = remainingDigits;
         }
-        else if(calculatorNumber === 'Submit'){
-            
-        }
+        
     }
     else{
         numberField.value = totalNumber;
     }
     
+})
+
+document.getElementById('btn-submit').addEventListener('click',function(){
+    const pinFiled = document.getElementById('pin-from');
+    const pinMatchFaild = pinFiled.value;
+
+    const pinFiled1 = document.getElementById('numbers-field');
+    const pinMatchFaild1 = pinFiled1.value;
+
+    const pinmatch1 = document.getElementById('wrong-pin');
+    const pinmatch = document.getElementById('pin-matched');
+
+    if(pinMatchFaild === pinMatchFaild1){
+        pinmatch.style.display = 'block';
+        pinmatch1.style.display = 'none';
+    }
+    else{
+        pinmatch1.style.display = 'block';
+        pinmatch.style.display = 'none';
+    }
 })
